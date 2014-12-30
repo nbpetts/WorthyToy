@@ -1,0 +1,93 @@
+@import "settings";
+@import "foundation";
+ body {
+  font-family: 'Griffy', cursive;
+}
+.switchable {
+  background: rgba(204, 166, 14, 1);
+  background: -moz-radial-gradient(center, ellipse cover, rgba(204, 166, 14, 1) 0%, rgba(204, 166, 14, 1) 0%, rgba(204, 166, 14, 0) 83%);
+  background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%, rgba(204, 166, 14, 1)), color-stop(0%, rgba(204, 166, 14, 1)), color-stop(83%, rgba(204, 166, 14, 0)));
+  background: -webkit-radial-gradient(center, ellipse cover, rgba(204, 166, 14, 1) 0%, rgba(204, 166, 14, 1) 0%, rgba(204, 166, 14, 0) 83%);
+  background: -o-radial-gradient(center, ellipse cover, rgba(204, 166, 14, 1) 0%, rgba(204, 166, 14, 1) 0%, rgba(204, 166, 14, 0) 83%);
+  background: -ms-radial-gradient(center, ellipse cover, rgba(204, 166, 14, 1) 0%, rgba(204, 166, 14, 1) 0%, rgba(204, 166, 14, 0) 83%);
+  background: radial-gradient(ellipse at center, rgba(204, 166, 14, 1) 0%, rgba(204, 166, 14, 1) 0%, rgba(204, 166, 14, 0) 83%);
+  /* filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#cca60e',
+ endColorstr='#cca60e',
+ GradientType=1);*/
+}
+body {
+  background-color: #cb9540;
+  background-image: url(../images/paper_texture322.jpg);
+  //  background-size:cover;
+
+}
+.main,
+.intro {
+  background-color: rgba(242, 242, 242, 0.39);
+  border: none;
+}
+.intro {} p {
+  font-size: 2em;
+}
+.button {
+  font-size: 2em;
+}
+h1 {
+  //  font-family:'Jim Nightshade',cursive;
+  //  font-family: 'Macondo Swash Caps', cursive;
+  //  font-family: 'Eagle Lake', cursive;
+  //  font-family: 'UnifrakturCook', cursive;
+  //  font-family: 'UnifrakturMaguntia', cursive;
+  font-family: 'Griffy', cursive;
+  font-size: 2.3em;
+  background: #cb9540;
+}
+span {
+  font-family: 'Griffy', cursive;
+  font-size: 1em;
+}
+p::first-letter,
+h1::first-letter {
+  font-weight: 550;
+  font-size: 2em;
+}
+P {
+  line-height: 2.75em;
+}
+// Or selectively include components
+// @import
+//   "foundation/components/accordion",
+//   "foundation/components/alert-boxes",
+//   "foundation/components/block-grid",
+//   "foundation/components/breadcrumbs",
+//   "foundation/components/button-groups",
+//   "foundation/components/buttons",
+//   "foundation/components/clearing",
+//   "foundation/components/dropdown",
+//   "foundation/components/dropdown-buttons",
+//   "foundation/components/flex-video",
+//   "foundation/components/forms",
+//   "foundation/components/grid",
+//   "foundation/components/inline-lists",
+//   "foundation/components/joyride",
+//   "foundation/components/keystrokes",
+//   "foundation/components/labels",
+//   "foundation/components/magellan",
+//   "foundation/components/orbit",
+//   "foundation/components/pagination",
+//   "foundation/components/panels",
+//   "foundation/components/pricing-tables",
+//   "foundation/components/progress-bars",
+//   "foundation/components/reveal",
+//   "foundation/components/side-nav",
+//   "foundation/components/split-buttons",
+//   "foundation/components/sub-nav",
+//   "foundation/components/switch",
+//   "foundation/components/tables",
+//   "foundation/components/tabs",
+//   "foundation/components/thumbs",
+//   "foundation/components/tooltips",
+//   "foundation/components/top-bar",
+//   "foundation/components/type",
+//   "foundation/components/offcanvas",
+//   "foundation/components/visibility";
