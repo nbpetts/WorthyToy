@@ -1,8 +1,9 @@
 @import "settings";
 @import "foundation";
- body {
+body {
   font-family: 'Griffy', cursive;
 }
+
 .switchable {
   background: rgba(204, 166, 14, 1);
   background: -moz-radial-gradient(center, ellipse cover, rgba(204, 166, 14, 1) 0%, rgba(204, 166, 14, 1) 0%, rgba(204, 166, 14, 0) 83%);
@@ -11,27 +12,30 @@
   background: -o-radial-gradient(center, ellipse cover, rgba(204, 166, 14, 1) 0%, rgba(204, 166, 14, 1) 0%, rgba(204, 166, 14, 0) 83%);
   background: -ms-radial-gradient(center, ellipse cover, rgba(204, 166, 14, 1) 0%, rgba(204, 166, 14, 1) 0%, rgba(204, 166, 14, 0) 83%);
   background: radial-gradient(ellipse at center, rgba(204, 166, 14, 1) 0%, rgba(204, 166, 14, 1) 0%, rgba(204, 166, 14, 0) 83%);
-  /* filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#cca60e',
- endColorstr='#cca60e',
- GradientType=1);*/
 }
+
 body {
   background-color: #cb9540;
   background-image: url(../images/paper_texture322.jpg);
   //  background-size:cover;
-
 }
+
 .main,
 .intro {
   background-color: rgba(242, 242, 242, 0.39);
   border: none;
 }
-.intro {} p {
+
+.intro {}
+
+p {
   font-size: 2em;
 }
+
 .button {
   font-size: 2em;
 }
+
 h1 {
   //  font-family:'Jim Nightshade',cursive;
   //  font-family: 'Macondo Swash Caps', cursive;
@@ -40,20 +44,34 @@ h1 {
   //  font-family: 'UnifrakturMaguntia', cursive;
   font-family: 'Griffy', cursive;
   font-size: 2.3em;
-  background: #cb9540;
 }
+
 span {
   font-family: 'Griffy', cursive;
   font-size: 1em;
 }
+
 p::first-letter,
 h1::first-letter {
   font-weight: 550;
   font-size: 2em;
 }
+
 P {
   line-height: 2.75em;
 }
+
+.author {
+  display: none;
+}
+
+.wordTable ul li {
+  border: 1px solid red;
+  list-style: none;
+  display: none;
+  position: relative
+}
+
 // Or selectively include components
 // @import
 //   "foundation/components/accordion",
