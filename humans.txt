@@ -8,3 +8,6 @@
   Software: Coda, Textmate, Git
 
 /* Copyright 2015 Nahtan Petts and Adventure Stage Chicago*/
+
+/* Stories by Cynthia Shur Petts */
+

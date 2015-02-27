@@ -61,9 +61,10 @@ $(function () {
   }); // end random button url
 
   //This code controls the loading of stories from the top bar nav
-  $(".storyGetter").click(function (e) {
-    var source = $(this).attr("href");
+  $("main, .dropdown").on("click", "a.storyGetter", function (e) {
     e.preventDefault();
+    var source = $(this).attr("href");
+    
 
     $("#main").fadeOut("fast", function () {
       $('.toggle-topbar').trigger('click');
@@ -75,7 +76,6 @@ $(function () {
 
     return true;
   }); //end  click
-
 
 
 
