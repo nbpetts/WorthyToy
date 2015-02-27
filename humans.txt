@@ -10,4 +10,7 @@
 /* Copyright 2015 Nahtan Petts and Adventure Stage Chicago*/
 
 /* Stories by Cynthia Shur Petts */
+<<<<<<< HEAD
 
+=======
+>>>>>>> 57b271359ae27daed7fb3504e9dc6a62e76fe3a3
