@@ -1,95 +1,84 @@
 @import "settings";
 @import "foundation";
-body {
-  font-family: 'Griffy', cursive;
+ body {
+    font-family: 'Griffy', cursive;
 }
-
 .switchable {
-  background: -moz-radial-gradient(center, ellipse cover, rgba(84, 147, 233, 0.65) 1%, rgba(103, 171, 235, 0.65) 17%, rgba(78, 130, 178, 0.65) 37%, rgba(35, 58, 79, 0) 72%, rgba(0, 0, 0, 0) 100%);
-  /* FF3.6+ */
-  
-  background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(1%, rgba(84, 147, 233, 0.65)), color-stop(17%, rgba(103, 171, 235, 0.65)), color-stop(37%, rgba(78, 130, 178, 0.65)), color-stop(72%, rgba(35, 58, 79, 0)), color-stop(100%, rgba(0, 0, 0, 0)));
-  /* Chrome,Safari4+ */
-  
-  background: -webkit-radial-gradient(center, ellipse cover, rgba(84, 147, 233, 0.65) 1%, rgba(103, 171, 235, 0.65) 17%, rgba(78, 130, 178, 0.65) 37%, rgba(35, 58, 79, 0) 72%, rgba(0, 0, 0, 0) 100%);
-  /* Chrome10+,Safari5.1+ */
-  
-  background: -o-radial-gradient(center, ellipse cover, rgba(84, 147, 233, 0.65) 1%, rgba(103, 171, 235, 0.65) 17%, rgba(78, 130, 178, 0.65) 37%, rgba(35, 58, 79, 0) 72%, rgba(0, 0, 0, 0) 100%);
-  /* Opera 12+ */
-  
-  background: -ms-radial-gradient(center, ellipse cover, rgba(84, 147, 233, 0.65) 1%, rgba(103, 171, 235, 0.65) 17%, rgba(78, 130, 178, 0.65) 37%, rgba(35, 58, 79, 0) 72%, rgba(0, 0, 0, 0) 100%);
-  /* IE10+ */
+    background: -moz-radial-gradient(center, ellipse cover, rgba(84, 147, 233, 0.65) 1%, rgba(103, 171, 235, 0.65) 17%, rgba(78, 130, 178, 0.65) 37%, rgba(35, 58, 79, 0) 72%, rgba(0, 0, 0, 0) 100%);
+    /* FF3.6+ */
+    background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(1%, rgba(84, 147, 233, 0.65)), color-stop(17%, rgba(103, 171, 235, 0.65)), color-stop(37%, rgba(78, 130, 178, 0.65)), color-stop(72%, rgba(35, 58, 79, 0)), color-stop(100%, rgba(0, 0, 0, 0)));
+    /* Chrome,Safari4+ */
+    background: -webkit-radial-gradient(center, ellipse cover, rgba(84, 147, 233, 0.65) 1%, rgba(103, 171, 235, 0.65) 17%, rgba(78, 130, 178, 0.65) 37%, rgba(35, 58, 79, 0) 72%, rgba(0, 0, 0, 0) 100%);
+    /* Chrome10+,Safari5.1+ */
+    background: -o-radial-gradient(center, ellipse cover, rgba(84, 147, 233, 0.65) 1%, rgba(103, 171, 235, 0.65) 17%, rgba(78, 130, 178, 0.65) 37%, rgba(35, 58, 79, 0) 72%, rgba(0, 0, 0, 0) 100%);
+    /* Opera 12+ */
+    background: -ms-radial-gradient(center, ellipse cover, rgba(84, 147, 233, 0.65) 1%, rgba(103, 171, 235, 0.65) 17%, rgba(78, 130, 178, 0.65) 37%, rgba(35, 58, 79, 0) 72%, rgba(0, 0, 0, 0) 100%);
+    /* IE10+ */
+}
+body {
+    background-color: #cb9540;
+    background-image: url(../images/paper_texture_and_Dragon.png);
+    //  background-size:cover;
+
+}
+.top-bar img {
+    max-height: 3.7em;
 }
 
-body {
-  background-color: #cb9540;
-  background-image: url(../images/paper_texture322.jpg);
-  //  background-size:cover;
-}
 
 .main,
 .intro {
-  background-color: rgba(242, 242, 242, 0.39);
-  border: none;
+    background-color: rgba(242, 242, 242, 0.75);
+    border: none;
 }
-
-.intro {}
-
-p {
-  font-size: 2em;
+.intro {} p {
+    font-size: 2em;
 }
-
 .button {
-  font-size: 2em;
+    font-size: 2em;
 }
-
 h1 {
-  //  font-family:'Jim Nightshade',cursive;
-  //  font-family: 'Macondo Swash Caps', cursive;
-  //  font-family: 'Eagle Lake', cursive;
-  //  font-family: 'UnifrakturCook', cursive;
-  //  font-family: 'UnifrakturMaguntia', cursive;
-  font-family: 'Griffy', cursive;
-  font-size: 2.3em;
+    //  font-family:'Jim Nightshade',cursive;
+    //  font-family: 'Macondo Swash Caps', cursive;
+    //  font-family: 'Eagle Lake', cursive;
+    //  font-family: 'UnifrakturCook', cursive;
+    //  font-family: 'UnifrakturMaguntia', cursive;
+    font-family: 'Griffy', cursive;
+    font-size: 2.3em;
 }
-
 span {
-  font-family: 'Griffy', cursive;
-  font-size: 1em;
+    font-family: 'Griffy', cursive;
+    font-size: 1em;
 }
-
 p::first-letter,
 h1::first-letter {
-  font-weight: 550;
-  font-size: 2em;
+    font-weight: 550;
+    font-size: 2em;
 }
-
 P {
-  line-height: 2.75em;
+    line-height: 2.75em;
 }
-article.about p  {
-  line-height: 2em;
+article.about p {
+    line-height: 2em;
 }
 p.signature {
-  font-size: 2em;
+    font-size: 2em;
 }
 span.credit {
-  white-space: nowrap;
+    white-space: nowrap;
 }
-
 .author {
-  display: none;
+    display: none;
 }
-
 .wordTable ul li {
-  border: 1px solid red;
-  list-style: none;
-  display: none;
-  position: relative
+    border: 1px solid red;
+    list-style: none;
+    display: none;
+    position: relative
 }
-#iAmNotAHuman {
+/*#iAmNotAHuman {
   display: none;
-}
+}*/
 
 // Or selectively include components
 // @import

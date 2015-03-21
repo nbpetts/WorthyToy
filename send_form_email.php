@@ -6,7 +6,7 @@ if(isset($_POST['email'])) {
     $email_to = "nbpetts@gmail.com";
  
     $email_subject = "Worthy Words Story";
-     header('location: index.html');
+     
      
  
      
@@ -14,7 +14,7 @@ if(isset($_POST['email'])) {
     function died($error) {
  
         // your error code can go here
- 
+        header('location: index.html?status=error');
         echo "We are very sorry, but there were error(s) found with the form you submitted. ";
  
         echo "These errors appear below.<br /><br />";
@@ -22,7 +22,9 @@ if(isset($_POST['email'])) {
         echo $error."<br /><br />";
  
         echo "Please go back and fix these errors.<br /><br />";
- 
+      
+        
+      
         die();
  
     }
@@ -111,7 +113,7 @@ if(isset($_POST['email'])) {
     $email_message .= "Because of this, ".clean_string($fourth_line)."\n";
     $email_message .= "Ever since that day: ".clean_string($fifth_line)."\n";
 // create email headers
- 
+ header('location: index.html?status=success');
 $headers = 'From: '.$email_from."\r\n".
  
 'Reply-To: '.$email_from."\r\n" .
