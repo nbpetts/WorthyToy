@@ -1,11 +1,12 @@
 <?php
+
 if(isset($_POST['email'])) {
    // EDIT THE 2 LINES BELOW AS REQUIRED
  
     $email_to = "nbpetts@gmail.com";
  
     $email_subject = "Worthy Words Story";
- 
+     header('location: index.html');
      
  
      
@@ -31,11 +32,9 @@ if(isset($_POST['email'])) {
  
         !isset($_POST['last_name']) ||
  
-        !isset($_POST['email']) ||
- 
-        !isset($_POST['telephone']) ||
- 
-        !isset($_POST['comments'])) {
+        !isset($_POST['email']) || 
+       
+        isset($_POST['is_not_human'])) {
  
         died('We are sorry, but there appears to be a problem with the form you submitted.');       
  
@@ -46,13 +45,18 @@ if(isset($_POST['email'])) {
     $last_name = $_POST['last_name']; // required
  
     $email_from = $_POST['email']; // required
- 
-    $telephone = $_POST['telephone']; // not required
- 
-    $comments = $_POST['comments']; // required
   
+    $first_line = $_POST['first_line'];
   
-  $error_message = "";
+    $second_line = $_POST['second_line'];
+  
+    $third_line = $_POST['third_line'];
+  
+    $fourth_line = $_POST['fourth_line'];
+  
+    $fifth_line = $_POST['fifth_line'];
+ 
+    $error_message = "";
  
     $email_exp = '/^[A-Za-z0-9._%-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,4}$/';
  
@@ -76,12 +80,7 @@ if(isset($_POST['email'])) {
  
   }
  
-  if(strlen($comments) < 2) {
- 
-    $error_message .= 'The Comments you entered do not appear to be valid.<br />';
- 
-  }
- 
+
   if(strlen($error_message) > 0) {
  
     died($error_message);
@@ -105,9 +104,12 @@ if(isset($_POST['email'])) {
  
     $email_message .= "Email: ".clean_string($email_from)."\n";
  
-    $email_message .= "Telephone: ".clean_string($telephone)."\n";
+    $email_message .= "Once upon a time there was... ".clean_string($first_line)."\n";
  
-    $email_message .= "Comments: ".clean_string($comments)."\n";
+    $email_message .= "And everyday, ".clean_string($second_line)."\n";
+    $email_message .= "Until one day: ".clean_string($third_line)."\n";
+    $email_message .= "Because of this, ".clean_string($fourth_line)."\n";
+    $email_message .= "Ever since that day: ".clean_string($fifth_line)."\n";
 // create email headers
  
 $headers = 'From: '.$email_from."\r\n".
@@ -116,19 +118,13 @@ $headers = 'From: '.$email_from."\r\n".
  
 'X-Mailer: PHP/' . phpversion();
  
-mail($email_to, $email_subject, $email_message, $headers);  
- 
-?>
-<!-- include your own success html here -->
- 
- 
- 
-Thank you for contacting us. We will be in touch with you very soon.
- 
- 
- 
-<?php
- 
+ mail($email_to, $email_subject, $email_message, $headers);  
+// header('location: index.html');
+  /*if (mail($email_to, $email_subject, $email_message, $headers)) {
+    header('location: index.html');
+} else {
+    header('location: index.html');
+}*/
 }
  
 ?>

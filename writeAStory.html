@@ -1,38 +1,82 @@
-<form name="contactform" method="post" action="send_form_email.php">
+<form data-abide name="contactform" method="post" action="send_form_email.php">
 
+    <div class="row">
+        <ul class="tabs row medium-collapse" data-tab>
+            <li class="tab-title active small-12 columns"><a href="#panel1">Write with me</a>
+            </li>
+            <li class="tab-title small-12 columns"><a href="#panel2">Let me write my own</a>
+            </li>
+
+        </ul>
+        <div class="tabs-content">
+            <fieldset class="content active" id="panel1">
+                <div class="large-12 columns">
+                    <label>Once upon a time there was...
+                        <input type="text" name="first_line" placeholder="A human" />
+                    </label>
+                    <label>And everyday,
+                        <input type="text" name="second_line" placeholder="They played Ping Pong." />
+                    </label>
+                    <label>Until one day:
+                        <input type="text" name="third_line" placeholder="They lost their ball." />
+                    </label>
+                    <label>Because of this,
+                        <input type="text" name="fourth_line" placeholder="Made sure to have extra" />
+                    </label>
+                    <label>Ever since that day:
+                        <input type="text" name="fifth_line" placeholder="They lived happily ever after" />
+                    </label>
+
+
+                </div>
+            </fieldset>
+            <fieldset class="content" id="panel2">
+                <div class="row">
+                    <div class="large-12 columns">
+                        <label>Write your own story:
+                            <textarea type="text" name="free_story" placeholder="Once there was a young human who played the ukulele..."></textarea>
+                        </label>
+                    </div>
+                </div>
+            </fieldset>
+        </div>
+
+    </div>
+
+    <div class="row">
+        <div class="large-4 columns">
+            <label>Your First Name <small>required</small>
+                <input type="text" name="first_name" placeholder="Eustice"  required pattern="[a-zA-Z ]+"/>
+            </label>
+          <small class="error">Please let us know your first name.</small>
+        </div>
+        <div class="large-4 columns">
+            <label>Your Last Name <small>required</small>
+                <input type="text" name="last_name" placeholder="Mathers" required pattern="[a-zA-Z ]+"/>
+            </label>
+          <small class="error">Please let us know your last name.</small>
+        </div>
+        <div class="large-4 columns">
+            <label>Your Email <small>required</small>
+                <input type="email" name="email" placeholder="emaths@gorgmail.com" required />
+            </label>
+          <small class="error">Please give us a valid email.</small>
+        </div>
+        <div class="row hide">
+            <div class="">
+                <input id="iAmNotAHuman" type="checkbox" name="is_not_human" value="notHuman">
+                <label for="iAmNotAHuman">I am not a human</label>
+            </div>
+        </div>
+      
+    </div>
   <div class="row">
-    <div class="large-12 columns">
-      <label>Please tell us who you are
-        <input type="text" name="first_name" placeholder="Your First Name..." />
-      </label>
-    </div>
+  <input class="button small-12 medium-6 columns text-center" type="submit" value="Send Us Your Story">
   </div>
-  <div class="row">
-    <div class="large-4 columns">
-      <label>
-        <input type="text" name="last_name" placeholder="Your Last Name..." />
-      </label>
-    </div>
-    <div class="large-4 columns">
-      <label>
-        <input type="text" name="email" placeholder="Your Email..." />
-      </label>
-    </div>
-    <div class="large-4 columns">
-      <label>
-        <input type="text" name="telephone" placeholder="Your Telephone Number..." />
-      </label>
-    </div>
-   
-  </div>
-  
- 
-  <div class="row">
-    <div class="large-12 columns">
-      <label>Your Story
-        <textarea type="text" name="comments" placeholder="write a story here"></textarea>
-      </label>
-    </div>
-  </div>
-<input type="submit" value="Submit">   <a href="mail_form.php" class="button">Send Us Your Story</a>
-  </form>
+
+
+    
+</form>
+<script>
+    $(document).foundation('tab', 'reflow');
+</script>

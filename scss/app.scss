@@ -67,6 +67,15 @@ h1::first-letter {
 P {
   line-height: 2.75em;
 }
+article.about p  {
+  line-height: 2em;
+}
+p.signature {
+  font-size: 2em;
+}
+span.credit {
+  white-space: nowrap;
+}
 
 .author {
   display: none;
@@ -77,6 +86,9 @@ P {
   list-style: none;
   display: none;
   position: relative
+}
+#iAmNotAHuman {
+  display: none;
 }
 
 // Or selectively include components

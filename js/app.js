@@ -45,7 +45,7 @@ $(function () {
       randomNumber = Math.floor((Math.random() * pages.length));
     }
     $("#main").fadeOut("fast", function () {
-      $('.toggle-topbar').trigger('click');
+//      $('.toggle-topbar').trigger('click');
       $("#main").load(pages[randomNumber] + "#story");
       $("#main").attr("data-url", pages[randomNumber]);
       $('html, body').animate({
@@ -61,13 +61,16 @@ $(function () {
   }); // end random button url
 
   //This code controls the loading of stories from the top bar nav
-  $("main, .dropdown").on("click", "a.storyGetter", function (e) {
+  $("main, .dropdown, .topBarLink").on("click", "a.storyGetter", function (e) {
     e.preventDefault();
+    if ($("nav.top-bar").hasClass("expanded")){
+      $(".toggle-topbar.menu-icon > a > span").trigger('click');
+      
+    }
     var source = $(this).attr("href");
     
 
     $("#main").fadeOut("fast", function () {
-      $('.toggle-topbar').trigger('click');
       $("#main").load(source + "#story");
       $("#main").attr("data-url", source);
       $("#main").fadeIn("fast");
