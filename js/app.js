@@ -10,17 +10,23 @@ $(function() {
     $(".main, .intro").on("click", "span.switchable", function(e) {
 
         var replacedWord = $.trim(e.target.innerHTML),
+            altWords = $(e.target).attr("data-altwords").trim(),
             wordReplacementList = $(e.target).attr("data-altwords").trim().split(" ");
-        var randomWord = wordReplacementList[Math.floor(Math.random() * wordReplacementList.length)];
-        var randomWordHumanized = randomWord.replace("-", " ");
+        var replacedWordHyphenated = replacedWord.replace(/ /g, "-");
+        if ((altWords.search(replacedWordHyphenated)) < 0) {
+            altWords = altWords.concat(" " + replacedWordHyphenated);
+        }
 
-        if (randomWordHumanized == replacedWord) {
+        var randomWord = wordReplacementList[Math.floor(Math.random() * wordReplacementList.length)];
+        var randomWordHumanized = randomWord.replace(/-/g, " ");
+
+        if (replacedWordHyphenated == replacedWord) {
             while (randomWordHumanized == replacedWord) {
                 randomWordHumanized = wordReplacementList[Math.floor(Math.random() * wordReplacementList.length)];
             }
 
         }
-        var span = "<span class='word switchable' data-altWords='" + $(e.target).attr("data-altwords").trim() + "' style='display:none;'> " + randomWordHumanized + "</span>";
+        var span = "<span class='word switchable' data-altWords='" + altWords + "' style='display:none;'> " + randomWordHumanized + "</span>";
 
 
         $('span:contains("' + replacedWord + '")').fadeOut('fast', function() {
@@ -35,27 +41,30 @@ $(function() {
     $("main").on("click", "a.randomStory", function(e) {
         e.preventDefault();
         var pages = ["princessAndThePea.html",
-            "aladdin.html",
-            "uglyDuckling.html",
-            "cinderella.html"
+            "princessRobinsTravel.html",
+            "princessLizasJoke.html",
+            "cinderella.html", 
+            "princessLunaLearns.html", 
+            "princeJosephsFear.html"
         ],
             randomNumber = Math.floor((Math.random() * pages.length)),
             currentPage = $("#main").attr("data-url");
         while (pages[randomNumber] == currentPage) {
             randomNumber = Math.floor((Math.random() * pages.length));
         }
-        $("#main").fadeOut("fast", function() {
+        $("#main").hide("slide", {
+            "direction": "left"
+        }, function() {
             //      $('.toggle-topbar').trigger('click');
             $("#main").load(pages[randomNumber] + "#story");
             $("#main").attr("data-url", pages[randomNumber]);
             $('html, body').animate({
                 scrollTop: 0
             }, 0);
-            $("#main").fadeIn("fast");
+            $("#main").show("slide", {
+                "direction": "right"
+            });
         });
-
-
-
 
 
     }); // end random button url
@@ -67,13 +76,19 @@ $(function() {
             $(".toggle-topbar.menu-icon > a > span").trigger('click');
 
         }
+
         var source = $(this).attr("href");
 
 
-        $("#main").fadeOut("fast", function() {
+        $("#main").hide("slide", {
+            "direction": "left"
+        }, function() {
             $("#main").load(source + "#story");
             $("#main").attr("data-url", source);
-            $("#main").fadeIn("fast");
+            $("#main").show("slide", {
+                "direction": "right"
+            });
+            $("#main").trigger("click");
         });
 
 

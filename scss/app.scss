@@ -2,7 +2,12 @@
 @import "foundation";
  body {
     font-family: 'Griffy', cursive;
+
 }
+form label {
+  font-family: $nav-font-family;
+}
+
 .switchable {
     background: -moz-radial-gradient(center, ellipse cover, rgba(84, 147, 233, 0.65) 1%, rgba(103, 171, 235, 0.65) 17%, rgba(78, 130, 178, 0.65) 37%, rgba(35, 58, 79, 0) 72%, rgba(0, 0, 0, 0) 100%);
     /* FF3.6+ */
@@ -17,12 +22,13 @@
 }
 body {
     background-color: #cb9540;
-    background-image: url(../images/paper_texture_and_Dragon.png);
-    //  background-size:cover;
+    background-image: url(../images/paper_texture322_dragon.jpg);
+//  background-position: center top; 
+      background-size:cover;
 
 }
-.top-bar img {
-    max-height: 3.7em;
+textarea {
+  height: 200px;
 }
 
 
@@ -31,10 +37,17 @@ body {
     background-color: rgba(242, 242, 242, 0.75);
     border: none;
 }
-.intro {} p {
+main img {
+  padding: 0.5em;
+}
+#main > div > a.button.small-12.medium-6.columns.text-center.storyGetter {
+  clear:both;
+}
+p {
     font-size: 2em;
 }
 .button {
+  font-family: $nav-font-family;
     font-size: 2em;
 }
 h1 {
@@ -46,9 +59,13 @@ h1 {
     font-family: 'Griffy', cursive;
     font-size: 2.3em;
 }
-span {
+/*span {
     font-family: 'Griffy', cursive;
     font-size: 1em;
+}*/
+
+body > nav > ul > li.toggle-topbar.menu-icon > a > span, body > nav > section > ul > li.active.has-dropdown.not-click.moved > ul > li.title.back.js-generated > h5 > a {
+  font-family: $nav-font-family;
 }
 p::first-letter,
 h1::first-letter {
@@ -76,10 +93,50 @@ span.credit {
     display: none;
     position: relative
 }
-/*#iAmNotAHuman {
-  display: none;
-}*/
 
+// media query styles
+@media #{$small-up} {
+
+    .top-bar img {
+    max-height: 3.7em;
+    
+}
+  body > nav > ul > li.name > h1 > a
+  {
+    padding: 0 0 0 0 !important;
+}
+ 
+}
+@media #{$small-only} { }
+
+@media #{$medium-up} { 
+  
+ ul.right li a {
+    font-size: 1em;
+  }
+  .top-bar img {
+    max-height: 2.4em;
+  
+}
+
+}
+@media #{$medium-only} { 
+
+
+
+}
+
+@media #{$large-up} { 
+
+
+  .top-bar img {
+    max-height: 3.7em;
+}
+   ul.right li a {
+    font-size: 1.5em;
+  }
+}
+@media #{$large-only} { }
 // Or selectively include components
 // @import
 //   "foundation/components/accordion",
