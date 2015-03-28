@@ -102,7 +102,7 @@ if(isset($_POST['email'])) {
       return str_replace($bad,"",$string);
  
     }
-  if(isset($first_line){
+  if(isset($first_line)){
     $email_message .= "First Name: ".clean_string($first_name)."\n";
  
     $email_message .= "Last Name: ".clean_string($last_name)."\n";
@@ -117,7 +117,7 @@ if(isset($_POST['email'])) {
     $email_message .= "Ever since that day: ".clean_string($fifth_line)."\n";
   }
      
-  if(isset($free_story){
+  if(isset($free_story)){
     $email_message .= "First Name: ".clean_string($first_name)."\n";
  
     $email_message .= "Last Name: ".clean_string($last_name)."\n";
