@@ -102,7 +102,7 @@ if(isset($_POST['email'])) {
       return str_replace($bad,"",$string);
  
     }
-  if(isset($first_line)){
+  if(strlen($first_line) != 0){
     $email_message .= "First Name: ".clean_string($first_name)."\n";
  
     $email_message .= "Last Name: ".clean_string($last_name)."\n";
@@ -117,19 +117,17 @@ if(isset($_POST['email'])) {
     $email_message .= "Ever since that day: ".clean_string($fifth_line)."\n";
   }
      
-  if(isset($free_story)){
+  if(strlen($free_story) != 0){
     $email_message .= "First Name: ".clean_string($first_name)."\n";
  
     $email_message .= "Last Name: ".clean_string($last_name)."\n";
  
     $email_message .= "Email: ".clean_string($email_from)."\n";
  
-    $email_message .= "Once upon a time there was... ".clean_string($first_line)."\n";
+    $email_message .= clean_string($first_name)." wrote you a story: \n";
  
-    $email_message .= "And everyday, ".clean_string($second_line)."\n";
-    $email_message .= "Until one day: ".clean_string($third_line)."\n";
-    $email_message .= "Because of this, ".clean_string($fourth_line)."\n";
-    $email_message .= "Ever since that day: ".clean_string($fifth_line)."\n";
+    $email_message .= clean_string($free_story)."\n";
+    
   }
 // create email headers
  header('location: index.html?status=success');
