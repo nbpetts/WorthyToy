@@ -57,6 +57,8 @@ if(isset($_POST['email'])) {
     $fourth_line = $_POST['fourth_line'];
   
     $fifth_line = $_POST['fifth_line'];
+  
+    $free_story = $_POST['free_story'];
  
     $error_message = "";
  
