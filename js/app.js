@@ -20,9 +20,9 @@ $(function() {
         var randomWord = wordReplacementList[Math.floor(Math.random() * wordReplacementList.length)];
         var randomWordHumanized = randomWord.replace(/-/g, " ");
 
-        if (replacedWordHyphenated == replacedWord) {
-            while (randomWordHumanized == replacedWord) {
-                randomWordHumanized = wordReplacementList[Math.floor(Math.random() * wordReplacementList.length)];
+        if (randomWordHumanized === replacedWord) {
+            while (randomWordHumanized === replacedWord) {
+                randomWordHumanized = wordReplacementList[Math.floor(Math.random() * wordReplacementList.length)].replace(/-/g, " ");
             }
 
         }
