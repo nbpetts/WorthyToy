@@ -66,6 +66,10 @@ h1 {
 
 body > nav > ul > li.toggle-topbar.menu-icon > a > span, body > nav > section > ul > li.active.has-dropdown.not-click.moved > ul > li.title.back.js-generated > h5 > a, body > nav > section > ul > li.active.has-dropdown.moved > ul > li.title.back.js-generated > h5 > a {
   font-family: $nav-font-family;
+  font-size: 0.75em;
+}
+body > nav > section > ul > li.active.has-dropdown.moved > ul > li.parent-link.show-for-small > a {
+  color: $alert-color;
 }
 p::first-letter,
 h1::first-letter {
