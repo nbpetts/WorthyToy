@@ -9,7 +9,9 @@
 
 /* Copyright 2015 Nahtan Petts and Adventure Stage Chicago*/
 
-/* Stories by Cynthia Shur Petts */
+/* Stories by Cynthia Shur Petts and Dani Bryant */
+
+/* Photos, Illustration and Graphic Design by Julian Gonzalez, Ryan Bourque and Ben Rumback */
 <<<<<<< HEAD
 
 =======
