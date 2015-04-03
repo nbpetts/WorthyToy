@@ -34,7 +34,7 @@ textarea {
 
 .main,
 .intro {
-    background-color: rgba(242, 242, 242, 0.75);
+    background-color: rgba(242, 242, 242, 0.9);
     border: none;
 }
 main img {
@@ -45,6 +45,7 @@ main img {
 }
 p {
     font-size: 2em;
+  letter-spacing: 0.05em;
 }
 .button {
   font-family: $nav-font-family;
@@ -57,7 +58,7 @@ h1 {
     //  font-family: 'UnifrakturCook', cursive;
     //  font-family: 'UnifrakturMaguntia', cursive;
     font-family: 'Griffy', cursive;
-    font-size: 2.3em;
+    font-size: 3em;
 }
 /*span {
     font-family: 'Griffy', cursive;
@@ -73,7 +74,7 @@ body > nav > section > ul > li.active.has-dropdown.moved > ul > li.parent-link.s
 }
 p::first-letter,
 h1::first-letter {
-    font-weight: 550;
+    
     font-size: 2em;
 }
 P {
@@ -102,14 +103,37 @@ span.credit {
 @media #{$small-up} {
 
     .top-bar img {
-    max-height: 3.7em;
+      max-height: 3.7em;
+
+      }
+    body > nav > ul > li.name > h1 > a
+      {
+        padding: 0 0 0 0 !important;
+      }
+  h1 {
+    font-size: 2.2em;
+//    font-weight: bold;
+    letter-spacing: 0.15em;
+  }
+  span.credit {
+    font-size: 0.75em;
+  }
+ li .tab-title .active{
     
+  }
+li.tab-title.active > a {
+  font-weight: 700;
 }
-  body > nav > ul > li.name > h1 > a
-  {
-    padding: 0 0 0 0 !important;
-}
- 
+  li.tab-title  i {
+display: none;
+  }
+  li.tab-title  a {
+   padding-left: 5em;
+  }
+  li.tab-title.active  i {
+display: inline-block;
+    margin-right: 1em;
+  }
 }
 @media #{$small-only} { }
 
@@ -122,6 +146,11 @@ span.credit {
     max-height: 2.4em;
   
 }
+  h1 {
+    font-size: 3em;
+    font-weight: normal;
+    
+  }
 
 }
 @media #{$medium-only} { 
